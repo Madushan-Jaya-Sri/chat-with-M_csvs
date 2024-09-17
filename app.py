@@ -15,7 +15,23 @@ def chat_with_csv(df,query):
     pandas_ai = SmartDataframe(df, config={"llm": llm})
     # Chat with the DataFrame using the provided query
     result = pandas_ai.chat(query)
+
+    print(result)
     return result
+
+
+
+    # # Initialize SmartDataframe with DataFrame and LLM configuration
+    # pandas_ai = SmartDataframe(df, config={"llm": llm})
+    
+    # # Chat with the DataFrame using the provided query
+    # # Add debug: Show the generated code before executing
+    # generated_code = pandas_ai.generate_code(query)
+    # st.code(generated_code, language='python')  # This will display the code
+    
+    # result = pandas_ai.chat(query)
+    # return result
+
 
 # Set layout configuration for the Streamlit page
 st.set_page_config(layout='wide')
