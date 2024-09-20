@@ -5,7 +5,7 @@ from langchain_openai.chat_models import AzureChatOpenAI, ChatOpenAI
 from sqlalchemy import create_engine
 from langchain.sql_database import SQLDatabase
 from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
-
+import plotly.graph_objects as go
 import re
 from operator import itemgetter
 from langchain_core.output_parsers import StrOutputParser
